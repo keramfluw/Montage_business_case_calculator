@@ -32,3 +32,37 @@ for monteure in range(1, 6):
 output_file = "wirtschaftlichkeit_montage_mit_anzahl.xlsx"
 df.to_excel(output_file, index=False)
 print(f"Die Datei wurde erfolgreich gespeichert: {output_file}")
+import os
+import subprocess
+import sys
+
+# Funktion zur Installation der erforderlichen Systempakete
+def install_system_dependencies():
+    try:
+        print("Installiere Systemabhängigkeiten...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pip"])
+        subprocess.check_call(["sudo", "apt-get", "update"])
+        subprocess.check_call(["sudo", "apt-get", "install", "-y", "build-essential", "python3-dev"])
+        print("Systemabhängigkeiten erfolgreich installiert!")
+    except subprocess.CalledProcessError as e:
+        print(f"Fehler bei der Installation der Systempakete: {e}")
+        sys.exit(1)
+
+# Funktion zur Installation der Pandas Version 1.5.3
+def install_pandas():
+    try:
+        print("Installiere Pandas 1.5.3...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "pandas==1.5.3"])
+        print("Pandas erfolgreich installiert!")
+    except subprocess.CalledProcessError as e:
+        print(f"Fehler bei der Installation von Pandas: {e}")
+        sys.exit(1)
+
+# Hauptfunktion
+def main():
+    install_system_dependencies()  # Systemabhängigkeiten installieren
+    install_pandas()  # Pandas installieren
+    # Dein vorhandenes Code hier
+
+if __name__ == "__main__":
+    main()
