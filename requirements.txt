@@ -1,5 +1,1 @@
-# Dieses Projekt benötigt keine externen Bibliotheken, daher ist requirements.txt leer.
-# Falls später Bibliotheken hinzugefügt werden, können sie hier aufgeführt werden.
 
-# Beispiel:
-# numpy==1.23.4
