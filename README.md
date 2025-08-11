@@ -1,55 +1,28 @@
-# Montagekosten Rechner
 
-Dieses Python-Projekt berechnet die Wirtschaftlichkeit von Montagen basierend auf einem Stundensatz von 28 Euro pro Stunde und einer vorgegebenen Liste von Geräten und deren Montagekosten.
+# Wirtschaftlichkeit der Montagen
 
-## Funktionen
+Dieses Python-Skript berechnet die Wirtschaftlichkeit von Montagearbeiten, basierend auf verschiedenen Komponenten, Anzahl der Monteure und Anzahl der Montagen.
 
-- Berechnung der Gesamtarbeitszeit und der Arbeitskosten für die Montage von Geräten.
-- Berechnung der Gesamtkosten (inklusive Arbeitskosten) für verschiedene Geräte, abhängig von der Anzahl der Installationen.
-- Möglichkeit, unterschiedliche Geräte zu wählen (Wasserzähler, Wärmezähler, AMR, HKVE, Rauchmelder).
+## Anforderungen
 
-## Installation
+- pandas
 
-1. Stelle sicher, dass du [Python 3.x](https://www.python.org/downloads/) auf deinem Rechner installiert hast.
-2. Erstelle ein virtuelles Environment (optional, aber empfohlen):
-    ```bash
-    python -m venv venv
-    source venv/bin/activate   # Auf Windows: venv\Scripts\activate
-    ```
+## Verwendung
 
-3. Installiere die notwendigen Python-Bibliotheken (falls vorhanden):
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. Lade das Projekt herunter und speichere die Datei als `montagekosten_rechner.py`.
-
-## Benutzung
-
-1. Starte das Python-Skript:
-    ```bash
-    python montagekosten_rechner.py
-    ```
-
-2. Folge den Anweisungen im Terminal:
-    - Gib das Gerät ein, für das du die Kosten berechnen möchtest (z.B. `Wasserzaehler`, `Waermezaehler`).
-    - Gib die Anzahl der Installationen an.
-
-3. Die Berechnungen (Gesamtarbeitszeit, Gesamtpreis, Arbeitskosten und Gesamtpreis inkl. Arbeitskosten) werden ausgegeben.
-
-## Beispiel
-
-```bash
-Geben Sie das Gerät ein (z.B. 'Wasserzaehler', 'Waermezaehler', 'AMR', 'HKVE', 'Rauchmelder'): Wasserzaehler
-Geben Sie die Anzahl der Installationen ein: 10
-
-Berechnung für Gerät: Wasserzaehler
-Gesamtzeit (in Stunden): 3.3
-Gesamtpreis für Wasserzaehler (ohne Arbeitskosten): 118.00 €
-Arbeitskosten: 92.4 €
-Gesamtpreis (inkl. Arbeitskosten): 210.40 €
+1. Installiere die erforderlichen Python-Bibliotheken:
+```
+pip install -r requirements.txt
 ```
 
-## Lizenz
+2. Führe das Skript aus:
+```
+python wirtschaftlichkeit_montage.py
+```
 
-Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe die [LICENSE](LICENSE) Datei für Details.
+Das Skript erstellt eine Excel-Datei `wirtschaftlichkeit_montage_mit_anzahl.xlsx` mit den berechneten Kosten.
+
+## Dateiübersicht
+
+- `wirtschaftlichkeit_montage.py`: Python-Skript zur Berechnung der Montagekosten
+- `wirtschaftlichkeit_montage_mit_anzahl.xlsx`: Excel-Datei mit den Ergebnissen
+- `requirements.txt`: Liste der benötigten Python-Pakete
