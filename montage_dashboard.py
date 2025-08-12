@@ -20,7 +20,7 @@ montage_daten = {
     "Rauchmelder Neuausstattung und Austausch": (0.25, 8.00)
 }
 
-st.title("release1.1 Wirtschaftlichkeits-Dashboard für Montagen")
+st.title("beatz.services GmbH Wirtschaftlichkeits-Dashboard für Montagen")
 
 # Eingabe: Stundensatz und Anzahl Monteure
 st.sidebar.header("Allgemeine Einstellungen")
